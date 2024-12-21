@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course List</title>
+</head>
+<body>
+    <h1>Course List</h1>
+    <ul>
+        {% for course in courses %}
+            <li>
+                <a href="{% url 'examapp:course_detail' course.id %}">{{ course.title }}</a> - Rating: {{ course.rate }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
